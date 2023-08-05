@@ -20,6 +20,7 @@ const ListEmployeeComponent = () => {
     }
 
   return (
+    
     <div className='container'>
       <h2 className='text-center'>List Employees</h2>
       <table className='table table-bordered table-stripped'>
