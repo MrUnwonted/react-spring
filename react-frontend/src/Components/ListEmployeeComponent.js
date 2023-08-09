@@ -11,7 +11,7 @@ const ListEmployeeComponent = () => {
 
         getAllEmployee();
     }, [])
-    
+
     const getAllEmployee= () => {
         EmployeeService.getAllEmployees().then((response) => {
             setEmployees(response.data)
@@ -33,6 +33,7 @@ const ListEmployeeComponent = () => {
             <th> Employee first Name</th>
             <th> Employee last Name</th>
             <th> Employee Email Id</th>
+            <th> Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -44,6 +45,9 @@ const ListEmployeeComponent = () => {
                         <td>{employee.firstName} </td>
                         <td>{employee.lastName} </td>
                         <td>{employee.emailId} </td>
+                        <td>
+                            <Link className='btn btn-info' to={`/edit-employee/${employee.id}`}>Update</Link>
+                        </td>
                     </tr>
                 )
             }
