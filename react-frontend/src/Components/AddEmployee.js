@@ -104,7 +104,8 @@ const AddEmployee = () => {
                          </div>
 
                          <button className = "btn btn-success" onClick = {(e) => saveOrUpdateEmployee(e)} >Submit </button>
-                         <Link to="/employees" className='btn btn-danger' >Cancel</Link>
+                         <Link to="/employees" className='btn btn-danger'
+                         style = {{marginLeft:"10px"}} >Cancel</Link>
                      </form>
 
                  </div>
